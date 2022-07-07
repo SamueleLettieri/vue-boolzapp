@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ms_header-sfondo{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(0, 185, 161);
+}
+
+.ms_main-sfondo{
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(218, 216, 216);
+}
+
+.ms_w-box{
+    width: calc(80% / 2);
+ 
+    
+}
+
+.ms_img-avatar{
+    width: 7%;
+    height: 7%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.ms_sf-w{
+    background-color: white;
+}
