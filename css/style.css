@@ -16,19 +16,80 @@
     background-color: rgb(218, 216, 216);
 }
 
-.ms_w-box{
-    width: calc(80% / 2);
- 
-    
+.ms_p-b{
+    position: absolute;
+    top: 10px;
+    left: 30px;
 }
 
-.ms_img-avatar{
-    width: 7%;
-    height: 7%;
+.ms_w-box{
+    width: 90%;
+}
+
+
+.ms_img-profilo{
+    width: 40%;
     object-fit: cover;
     border-radius: 50px;
 }
 
 .ms_sf-w{
+    background-color: rgb(240, 238, 238);
+}
+
+.ms_pad{
+    padding: 10px 15px ;
+}
+
+.ms_icon{
+    font-size: 20px;
+}
+
+.ms_bord{
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.ms_font{
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.link{
+    color: rgb(43, 43, 43);
+    font-size: 13px;
+}
+
+.ms_cerca{
+    color: lightgrey;
+}
+
+.ms_lente{
+    padding: 1px 20px;
     background-color: white;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.ms_w-inp{
+    width: 100%;
+    padding: 1px 0;
+}
+
+.ms_mod-inp{
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.ms_im-avatar{
+    width: 15%;
+}
+
+.ms_img-avatar{
+    width: 90%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.ms_font-p{
+    font-size: 12px;
+    color: rgb(192, 192, 192);
 }
