@@ -2,6 +2,10 @@ const app = new Vue(
     {
         el: "#root",
         data:{
+            activeIndex: 0,
+
+            newClass: "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -168,8 +172,12 @@ const app = new Vue(
         },
 
         methods: {
-            
-          }
+            mettiClasse: function() {
+                if(this.status != this.status){
+                    this.newClass = "text-end"
+                }
+            }
+        }
     }
 )
 
