@@ -11,52 +11,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root">
-        <div class="ms_header-sfondo">
-
-        </div>
-
-
-        <div class="ms_p-b row ms_w-box">
-            <div class="col-4">
-                <div class="w-100 ms_pad ms_sf-w ms_bord d-flex justify-content-between">
-                    <div class="w-25"><img class="ms_img-profilo" src="./img/avatar_io.jpg" alt=""> Sofia</div>
-                    <div class="w-25 "><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i> <i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
+    <div id="root" class="mt-4">
+       
+        <div class="container d-flex">
+            <div class="ms_w-left">
+                <div class="d-flex p-2 justify-content-between ms_bord-bottom">
+                    <div><img class="ms_profilo" src="./img/avatar_io.jpg" alt=""> Sofia</div>
+                    <div><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i><i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
-                <div class="w-100 ms_pad ms_sf-w ms_bord d-flex ">
-                    <div class="col-2"><i class="ms_font fa-solid fa-bell-slash"></i></div>
-                    <div class="col-9">
-                        <h6>Ricevi notifiche di nuovi messaggi</h6>
-                        <div><a class="link" href="#">attiva totifiche desktop</a></div> 
+                <div class="d-flex p-2 ms_sfond">
+                    <div class="ms_campana"><i class="ms_font fa-solid fa-bell-slash"></i></div>
+                    <div>
+                        <div><strong> Notifiche di nuovi messaggi</strong></div>
+                        <div><a class="ms_mini" href="#">attiva totifiche desktop</a></div> 
                     </div>
                 </div>
-                <div class="w-100 ms_pad ms_sf-w ms_bord d-flex">
-                   <div class="ms_lente"><a class="ms_cerca" href=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                   <div class="col-10 ms_mod-inp"><input class="ms_w-inp" type="text" placeholder="cerca o inizia una nuova chat"></div>
+                <div class="d-flex p-2 ms_bord-bottom">
+                    <div class="ms_lente"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                    <div><input class="ms_inp" type="text" placeholder="Cerca o inizia una nuova chat"></div> 
                 </div>
-                <div class="w-100 ms_pad ms_sf-w ms_bord d-flex" v-for="(contact, index) in contacts">
-                    <div class="ms_im-avatar"><img class="ms_img-avatar" src="./img/avatar.jpg" alt=""></div>
-                    <div class="w-100 d-flex justify-content-between">
-                        <div>
-                            <h5>{{contact.name}}</h5>
-                            <div class="ms_font-p">ultimo messaggio inviato</div>
+                <div class="d-flex p-2 ms_bord-bottom" v-for="(contact, index) in contacts">
+                    <div><img class="avatar" src="./img/avatar_1.jpg" alt=""></div>
+                    <div class="d-flex justify-content-between">
+                        <div class="ms_inp">
+                            <div><strong>{{contact.name}}</strong></div>
+                            <div class="ms_mini">ultimo messaggio inviato</div>
                         </div>
-                        <div class="ms_font-p">22</div>    
+                        <div class="ms_mini">22</div>   
                     </div>
                 </div>
-            </div>
 
-            <div class="col-8">
-                g
             </div>
+            <div class="ms_w-right"></div>
         </div>
 
-        
-        <div class="ms_main-sfondo">
-
-        </div>
-    </div>
-
+       
 
 
 
