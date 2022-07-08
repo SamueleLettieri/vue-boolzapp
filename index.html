@@ -13,7 +13,7 @@
 <body>
     <div id="root" class="mt-4">
        
-        <div class="container d-flex">
+        <div class="container d-flex ms_box">
             <div class="ms_w-left">
                 <div class="d-flex p-2 justify-content-between ms_bord-bottom">
                     <div><img class="ms_profilo" src="./img/avatar_io.jpg" alt=""> Sofia</div>
@@ -31,7 +31,7 @@
                     <div><input class="ms_inp" type="text" placeholder="Cerca o inizia una nuova chat"></div> 
                 </div>
                 <div class="d-flex p-2 ms_bord-bottom" v-for="(contact, index) in contacts">
-                    <div><img class="avatar" src="./img/avatar_1.jpg" alt=""></div>
+                    <div><img class="avatar" :src=`./img/avatar${contact.avatar}.jpg` alt=""></div>
                     <div class="d-flex justify-content-between">
                         <div class="ms_inp">
                             <div><strong>{{contact.name}}</strong></div>
@@ -48,7 +48,7 @@
                     <div><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i><i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
                 <div class="img">
-
+                    
                 </div>
                 <div class="d-flex p-3 ms_footer-mod justify-content-between">
                     <div><i class="fa-solid fa-face-smile"></i></div>
