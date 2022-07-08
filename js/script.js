@@ -172,11 +172,7 @@ const app = new Vue(
         },
 
         methods: {
-            mettiClasse: function() {
-                if(this.status != this.status){
-                    this.newClass = "text-end"
-                }
-            }
+            
         }
     }
 )

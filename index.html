@@ -43,12 +43,22 @@
 
             </div>
             <div class="ms_w-right">
-                <div class="d-flex p-2 justify-content-between ms_bord-bottom">
-                    <div><img class="ms_profilo" src="./img/avatar_1.jpg" alt=""> Sofia</div>
-                    <div><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i><i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
+                <div class="d-flex p-2 ms_bord-bottom">
+                    <div><img class="ms_profilo" src="./img/avatar_1.jpg" alt=""></div>
+                    <div class="d-flex justify-content-betwee">
+                        <div class="ms_inp">
+                            <div><strong>Michele</strong></div>
+                            <div class="ms_mini">ultimo accesso oggi 12:00</div>
+                        </div>
+                        <div><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i><i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
                 </div>
                 <div class="img">
-                    
+                    <div class="container p-5" >
+                        <div class="mb-2" v-for="(element, index) in contacts[activeIndex].messages" :class="{ 'text-end': element.status === 'sent'}">
+                            <div class="ms_messag-green d_inline_block" :class="{ 'ms_messag-green': element.status === 'sent', 'ms_messag-white': element.status === 'received'}" >{{element.message}}</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="d-flex p-3 ms_footer-mod justify-content-between">
                     <div><i class="fa-solid fa-face-smile"></i></div>
@@ -61,7 +71,7 @@
        
 
 
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./js/script.js"></script>
 </body>

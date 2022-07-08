@@ -91,3 +91,17 @@ body{
 }
 
 
+
+.ms_messag-green{
+    background-color: rgb(153, 255, 153);
+}
+
+.ms_messag-white{
+    background-color: white;
+}
+
+.d_inline_block{
+    display: inline-block;
+    padding: 5px 85px 5px 10px; 
+    border-radius: 7px;
+}
