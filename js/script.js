@@ -4,8 +4,6 @@ const app = new Vue(
         data:{
             activeIndex: 0,
 
-            newClass: "",
-
             contacts: [
                 {
                     name: 'Michele',

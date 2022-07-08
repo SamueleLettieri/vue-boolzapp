@@ -30,7 +30,7 @@
                     <div class="ms_lente"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
                     <div><input class="ms_inp" type="text" placeholder="Cerca o inizia una nuova chat"></div> 
                 </div>
-                <div class="d-flex p-2 ms_bord-bottom" v-for="(contact, index) in contacts">
+                <div class="d-flex p-2 ms_bord-bottom ms_cursore" v-for="(contact, index) in contacts" @click="activeIndex = index">
                     <div><img class="avatar" :src=`./img/avatar${contact.avatar}.jpg` alt=""></div>
                     <div class="d-flex justify-content-between">
                         <div class="ms_inp">
@@ -44,10 +44,10 @@
             </div>
             <div class="ms_w-right">
                 <div class="d-flex p-2 ms_bord-bottom">
-                    <div><img class="ms_profilo" src="./img/avatar_1.jpg" alt=""></div>
+                    <div><img class="ms_profilo" :src=`./img/avatar${contacts[activeIndex].avatar}.jpg` alt=""></div>
                     <div class="d-flex justify-content-betwee">
                         <div class="ms_inp">
-                            <div><strong>Michele</strong></div>
+                            <div><strong>{{contacts[activeIndex].name}}</strong></div>
                             <div class="ms_mini">ultimo accesso oggi 12:00</div>
                         </div>
                         <div><i class="pe-3 ms_icon fa-solid fa-spinner"></i> <i class="pe-3 ms_icon fa-solid fa-message"></i><i class=" ms_icon fa-solid fa-ellipsis-vertical"></i></div>
