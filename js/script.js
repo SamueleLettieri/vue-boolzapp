@@ -225,8 +225,7 @@ const app = new Vue(
                     }
 
                 }
-            }
-
+            },
         }  
     }
 )

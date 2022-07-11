@@ -56,11 +56,8 @@
                 <div class="img">
                     <div class="container p-5">
                         <div class="mb-2" v-for="(element, index) in contacts[activeIndex].messages" :class="{ 'text-end': element.status === 'sent'}">
-                            <div class="ms_messag-green ms_messages position-relative" 
-                            :class="{ 'ms_messag-green': element.status === 'sent', 'ms_messag-white': element.status === 'received'}"  
-                            >{{element.message}} <i class="position-relative ms_left fa-solid fa-angle-down" @click="newClass(index)"></i>
-                            <div class="ms_mini text-end position-absolute ms_date">{{element.date}}</div></div>
-                            <div class="position-relative"   v-if="index == indexMessage && messageVisible == true  " >
+                            <div class="ms_messag-green ms_messages position-relative" :class="{ 'ms_messag-green': element.status === 'sent', 'ms_messag-white': element.status === 'received'}">{{element.message}} <i class="position-relative ms_left fa-solid fa-angle-down" @click="newClass(index)"></i><div class="ms_mini text-end position-absolute ms_date">{{element.date}}</div></div>
+                            <div class="position-relative"  v-if="index == indexMessage && messageVisible == true " >
                                 <div class="ms-info-messages p-2" :class="{ 'ms_right': element.status === 'sent'}" >
                                     <div class="p-1 ms_cursore">Message info</div>
                                     <div class="p-1 ms_cursore" @click="removeElement(index)">Delete message</div>
