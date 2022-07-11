@@ -3,9 +3,9 @@ const app = new Vue(
         el: "#root",
         data:{
             activeIndex: 0,
-            
+            indexMessage: 0,
             search: "",
-            classInfoMessages: "",
+            messageVisible: false,
 
             contacts: [
                 {
@@ -194,20 +194,17 @@ const app = new Vue(
                 setTimeout(() => this.contacts[this.activeIndex].messages.push(newMessage), 1000); 
             },
 
-            newClass: function() {
-
-                    if(this.classInfoMessages === "d-block"){
-                        this.classInfoMessages = "";
-                    } else {
-                        this.classInfoMessages = "d-block";
-                    }
+            newClass: function(index) {
+                this.indexMessage = index;
+                this.messageVisible = !this.messageVisible; 
                 
             },
             
             
 
             newIndex: function(Index) {
-                this.activeIndex = Index
+                this.activeIndex = Index;
+                this.messageVisible = false;
             },
 
             removeElement: function (messageIndex) {
