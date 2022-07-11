@@ -5,7 +5,6 @@ const app = new Vue(
             activeIndex: 0,
             
             search: "",
-            
             classInfoMessages: "",
 
             contacts: [
@@ -196,12 +195,16 @@ const app = new Vue(
             },
 
             newClass: function() {
-                this.classInfoMessages = "d-block"; 
-            },
 
-            remuvClass: function() {
-                this.classInfoMessages = ""; 
+                    if(this.classInfoMessages === "d-block"){
+                        this.classInfoMessages = "";
+                    } else {
+                        this.classInfoMessages = "d-block";
+                    }
+                
             },
+            
+            
 
             newIndex: function(Index) {
                 this.activeIndex = Index
@@ -213,9 +216,15 @@ const app = new Vue(
 
             searchBar: function() {
                 for (let i = 0; i < this.contacts.length; i++){
+                    this.contacts[i].visible = true
                     let profile = this.contacts[i].name;
-                    if(this.search != profile) {
+                    
+                    if(this.search != profile.toLowerCase()) {
                         this.contacts[i].visible = false;
+                    } 
+
+                    if(this.search === "" ){
+                        this.contacts[i].visible = true
                     }
 
                 }

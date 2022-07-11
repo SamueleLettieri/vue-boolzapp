@@ -139,6 +139,11 @@ body{
     display: none;
 }
 
+.ms_left{
+    left: 81px;
+    bottom: 8px;
+}
+
 .ms_right{
     right: 10px;
 }
