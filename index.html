@@ -27,17 +27,17 @@
                     </div>
                 </div>
                 <div class="d-flex p-2 ms_bord-top">
-                    <div class="ms_lente"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                    <div class="w-100"><input class="w-100 ms_input" type="text" placeholder="Cerca o inizia una nuova chat"></div> 
+                    <div class="ms_lente"><a href="#"><i class="ms_color-w fa-solid fa-magnifying-glass"></i></a></div>
+                    <div class="w-100"><input class="w-100 ms_input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyup.enter="searchBar()"></div> 
                 </div>
-                <div class="d-flex p-2 ms_bord-top ms_cursore ms_opacity w-100" v-for="(contact, index) in contacts" @click="activeIndex = index">
+                <div class="d-flex p-2 ms_bord-top ms_cursore ms_opacity w-100" v-for="(contact, index) in contacts" @click="newIndex(index)" :class=" {'d-none': contact.visible === false} ">
                     <div><img class="avatar" :src=`./img/avatar${contact.avatar}.jpg` alt=""></div>
                     <div class="d-flex justify-content-between w-100">
                         <div class="ms_inp">
                             <div><strong>{{contact.name}}</strong></div>
                             <div class="ms_mini">ultimo messaggio inviato</div>
                         </div>
-                        <div class="ms_mini">22</div>   
+                        <div class="ms_mini">12:00</div>   
                     </div>
                 </div>
 
@@ -54,9 +54,15 @@
                     </div>
                 </div>
                 <div class="img">
-                    <div class="container p-5" >
+                    <div class="container p-5">
                         <div class="mb-2" v-for="(element, index) in contacts[activeIndex].messages" :class="{ 'text-end': element.status === 'sent'}">
-                            <div class="ms_messag-green d_inline_block" :class="{ 'ms_messag-green': element.status === 'sent', 'ms_messag-white': element.status === 'received'}" >{{element.message}}</div>
+                            <div class="ms_messag-green ms_messages position-relative" :class="{ 'ms_messag-green': element.status === 'sent', 'ms_messag-white': element.status === 'received'}" @click="newClass" >{{element.message}} <div class="ms_mini text-end position-absolute ms_date">{{element.date}}</div></div>
+                            <div class="position-relative ms_d-none" :class="classInfoMessages" @click="remuvClass" >
+                                <div class="ms-info-messages p-2" :class="{ 'ms_right': element.status === 'sent'}" >
+                                    <div class="p-1 ms_cursore">Message info</div>
+                                    <div class="p-1 ms_cursore" @click="removeElement(index)">Delete message</div>
+                                </div>
+                            </div>    
                         </div>
                     </div>
                 </div>

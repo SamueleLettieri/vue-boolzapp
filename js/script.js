@@ -3,6 +3,10 @@ const app = new Vue(
         el: "#root",
         data:{
             activeIndex: 0,
+            
+            search: "",
+            
+            classInfoMessages: "",
 
             contacts: [
                 {
@@ -191,9 +195,33 @@ const app = new Vue(
                 setTimeout(() => this.contacts[this.activeIndex].messages.push(newMessage), 1000); 
             },
 
-            
+            newClass: function() {
+                this.classInfoMessages = "d-block"; 
+            },
 
-        } 
+            remuvClass: function() {
+                this.classInfoMessages = ""; 
+            },
+
+            newIndex: function(Index) {
+                this.activeIndex = Index
+            },
+
+            removeElement: function (messageIndex) {
+                this.contacts[this.activeIndex].messages.splice(messageIndex, 1);
+            },
+
+            searchBar: function() {
+                for (let i = 0; i < this.contacts.length; i++){
+                    let profile = this.contacts[i].name;
+                    if(this.search != profile) {
+                        this.contacts[i].visible = false;
+                    }
+
+                }
+            }
+
+        }  
     }
 )
 

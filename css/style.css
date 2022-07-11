@@ -111,13 +111,39 @@ body{
     background-color: white;
 }
 
-.d_inline_block{
+.ms_messages{
     display: inline-block;
-    padding: 5px 85px 5px 10px; 
+    padding: 5px 85px 10px 10px; 
     border-radius: 7px;
 }
 
 
 .ms_color-w{
     color: rgb(175, 175, 175);
+}
+
+.ms-info-messages{
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow:  1px  1px 5px #dedede,
+                 -1px -1px 5px #dedede,
+                 1px -1px 5px #dedede,
+                 -1px  1px 5px #dedede;
+    position: absolute;
+    top: -7px;
+    z-index: 1;
+}
+.ms_d-none{
+    display: none;
+}
+
+.ms_right{
+    right: 10px;
+}
+
+.ms_date{
+    bottom: 0;
+    right: 4px;
 }
